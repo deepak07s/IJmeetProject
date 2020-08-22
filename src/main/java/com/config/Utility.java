@@ -41,7 +41,7 @@ public class Utility {
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		String dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd_hh_mm_ss").format(new java.util.Date());
 		String screenshotPath = System.getProperty("user.dir") + "/Screenshots/" + fileName + " " + dateTimeFormat
-				+ ".jpg";
+				+ ".png";
 		try {
 			FileUtils.copyFile(src, new File(screenshotPath));
 		} catch (IOException e) {

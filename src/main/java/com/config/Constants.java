@@ -2,6 +2,8 @@ package com.config;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.apache.log4j.Logger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.openqa.selenium.WebDriver;
@@ -26,4 +28,5 @@ public class Constants {
 	public static String expected;
 	public static ExtentTest test;
 	public static ExtentReports extent;
+	public static Logger logger;
 }
