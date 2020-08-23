@@ -10,13 +10,15 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
+		System.out.println("On Test Start : " + result.getName());
+		Constants.test.log(Status.INFO, "Start Test Case: " + result.getName());
 
 	}
 
@@ -53,7 +55,8 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
+		System.out.println("On test Skipped " +result.getName());
+		Constants.test.log(Status.SKIP, "Skipped Test Case: " + result.getName());
 
 	}
 
@@ -67,7 +70,7 @@ public class TestListener implements ITestListener {
 	public void onStart(ITestContext context) {
 		// Start Reporters
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter(
-				new File(System.getProperty("user.dir") + "/Report/IJmeetExtentsReport.html"));
+				new File(System.getProperty("user.dir") + "/Report/ExtentsReport.html"));
 		// create ExtentReports and attach reporter
 		Constants.extent = new ExtentReports();
 		Constants.extent.attachReporter(reporter);

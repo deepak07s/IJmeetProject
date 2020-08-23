@@ -267,8 +267,7 @@ public class Keywords {
 
 	/**
 	 * This method is used to quits this driver, closing every associated window.
-	 * 
-	 * @author Sujit Kolhe
+	 *  @author Sujit Kolhe
 	 * 
 	 */
 	public static void quiteDriver() {
